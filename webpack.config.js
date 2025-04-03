@@ -13,6 +13,22 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.module\.scss$/,
+                use: [
+                    { loader: 'style-loader' },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                namedExport: false,
+                                localIdentName: '[name]__[local]__[hash:base64:5]'
+                            }
+                        }
+                    },
+                    { loader: 'sass-loader' }
+                ],
+            },
+            {
                 test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
                 use: 'babel-loader'
@@ -22,7 +38,7 @@ module.exports = {
     devtool: 'source-map',
     devServer: {
         static: {
-            directory: path.join(__dirname, "public")
+            directory: path.join(__dirname, 'public')
         },
         hot: true,
         port: 3000,
