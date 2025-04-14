@@ -1,0 +1,144 @@
+$outerSwiperColor: #42567a;
+$outerSwiperButtonBorderColor: #42567a80;
+$outerSwiperPaginationButtonColor: #42567a80;
+$outerSwiperPaginationButtonActiveColor: #42567a;
+$backgroundColor: #f4f5f9;
+
+@font-face {
+  font-family: 'PTSans-Regular';
+  src: url('../../../../src/fonts/PTSans-Regular.ttf') format('truetype');
+}
+
+:global(.outerSwiperCustomBullet) {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 10px;
+  background-color: $outerSwiperPaginationButtonColor;
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+:global(.outerSwiperCustomBulletActive) {
+  background-color: $outerSwiperPaginationButtonActiveColor;
+}
+
+.outerSwiperCommonWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: -18px;
+  margin-bottom: 50px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.outerSwiperWrapper {
+  display: block;
+}
+
+.outerSwiper {
+  margin-top: 56px;
+}
+
+.outerSwiperControlsWrapper {
+  display: block;
+  margin-left: 80px;
+
+  @media (max-width: 1024px) {
+    margin-top: 75px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.outerSwiperPaginationContainer {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -6px);
+
+  @media (max-width: 1024px) {
+    display: inline-block;
+  }
+}
+
+.outerSwiperPaginationContainerDisabled {
+  pointer-events: none;
+}
+
+.outerSwiperCounter {
+  color: $outerSwiperColor;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-family: 'PTSans-Regular';
+  line-height: 100%;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 10px;
+  }
+}
+
+.outerSwiperButton {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid $outerSwiperButtonBorderColor;
+  background-color: $backgroundColor;
+  border-radius: 50%;
+  text-align: center;
+  transition: 0.5s;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid $outerSwiperColor;
+    border-right: 2px solid $outerSwiperColor;
+  }
+
+  &:not(.outerSwiperButtonDisabled) {
+    &:hover {
+      cursor: pointer;
+      background-color: #fff;
+    }
+  }
+
+  &Prev {
+    padding-left: 10px;
+    margin-right: 20px;
+
+    &:after {
+      -moz-transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+    }
+
+    @media (max-width: 1024px) {
+      margin-right: -5px;
+    }
+  }
+
+  &Next {
+    padding-right: 10px;
+
+    &:after {
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+
+  &Disabled {
+    opacity: 0.5;
+  }
+
+  @media (max-width: 1024px) {
+    transform: scale(0.5);
+    margin-left: -12px;
+    margin-top: -12px;
+  }
+}

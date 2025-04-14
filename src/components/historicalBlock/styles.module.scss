@@ -1,0 +1,48 @@
+$historicalBlockBorderColor: #e3e6ed;
+
+.historicalBlockWrapper {
+  display: flex;
+  justify-content: center;
+  padding-left: 160px;
+
+  @media (max-width: 1200px) {
+    padding-left: 0;
+  }
+}
+
+.historicalBlock {
+  display: block;
+  position: relative;
+  max-width: 1440px;
+  min-width: 0;
+  min-height: 100vh;
+  border-left: 1px solid $historicalBlockBorderColor;
+  border-right: 1px solid $historicalBlockBorderColor;
+
+  @media (max-width: 1200px) {
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.historicalBlockHorizontalLine {
+  position: absolute;
+  top: 480px;
+  width: 100%;
+  border-top: 1px solid $historicalBlockBorderColor;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.historicalBlockVerticalLine {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  border-left: 1px solid $historicalBlockBorderColor;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}

@@ -1,0 +1,9 @@
+export declare const innerSwiper: string
+export declare const innerSwiperWrapper: string
+export declare const innerSwiperSlide: string
+export declare const innerSwiperSlideTitle: string
+export declare const innerSwiperSlideText: string
+export declare const innerSwiperButton: string
+export declare const innerSwiperButtonNext: string
+export declare const innerSwiperButtonPrev: string
+export declare const innerSwiperButtonDisabled: string

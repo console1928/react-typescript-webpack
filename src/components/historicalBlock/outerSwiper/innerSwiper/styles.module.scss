@@ -1,0 +1,119 @@
+$innerSwiperTextColor: #42567a;
+$innerSwiperButtonBorderColor: #42567a80;
+$innerSwiperButtonBackgroundColor: #fff;
+$innerSwiperTitleColor: #3877ee;
+$innerSwiperButtonShadowColor: #3877ee1a;
+$innerSwiperButtonHoverShadowColor: #3877ee80;
+$innerSwiperWrapperBorderColor: #c7cdd9;
+
+@font-face {
+  font-family: 'PTSans-Regular';
+  src: url('../../../../../src/fonts/PTSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BebasNeue-Regular';
+  src: url('../../../../../src/fonts/BebasNeue-Regular.ttf') format('truetype');
+}
+
+.innerSwiperWrapper {
+  min-height: 100px;
+  margin-left: 80px;
+  margin-right: 80px;
+
+  @media (max-width: 1024px) {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    border-top: 1px solid $innerSwiperWrapperBorderColor;
+  }
+}
+
+.innerSwiperButton {
+  position: absolute;
+  top: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  background-color: $innerSwiperButtonBackgroundColor;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 0 $innerSwiperButtonShadowColor;
+  text-align: center;
+  transition: 0.5s;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid $innerSwiperTitleColor;
+    border-right: 2px solid $innerSwiperTitleColor;
+  }
+
+  &:not(.innerSwiperButtonDisabled) {
+    &:hover {
+      cursor: pointer;
+      background-color: #fff;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 15px 0 $innerSwiperButtonHoverShadowColor;
+  }
+
+  &Prev {
+    padding-left: 10px;
+    left: 40px;
+
+    &:after {
+      -moz-transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+    }
+  }
+
+  &Next {
+    padding-right: 10px;
+    right: 40px;
+
+    &:after {
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+
+  &Disabled {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.innerSwiperSlideTitle {
+  font-family: 'BebasNeue-Regular';
+  color: $innerSwiperTitleColor;
+  margin-bottom: 15px;
+  font-size: 25px;
+  line-height: 120%;
+  display: block;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+.innerSwiperSlideText {
+  color: $innerSwiperTextColor;
+  font-family: 'PTSans-Regular';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+
+  @media (max-width: 1024px) {
+    font-size: 14px;
+    line-height: 145%;
+  }
+}

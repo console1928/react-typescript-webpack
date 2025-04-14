@@ -1,0 +1,12 @@
+export declare const outerSwiper: string
+export declare const outerSwiperWrapper: string
+export declare const outerSwiperCommonWrapper: string
+export declare const outerSwiperControlsWrapper: string
+export declare const outerSwiperCounter: string
+export declare const outerSwiperSlide: string
+export declare const outerSwiperButton: string
+export declare const outerSwiperButtonNext: string
+export declare const outerSwiperButtonPrev: string
+export declare const outerSwiperButtonDisabled: string
+export declare const outerSwiperPaginationContainer: string
+export declare const outerSwiperPaginationContainerDisabled: string

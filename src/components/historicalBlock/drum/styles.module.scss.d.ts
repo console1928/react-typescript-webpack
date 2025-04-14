@@ -1,0 +1,15 @@
+export declare const drum: string
+export declare const drumButton: string
+export declare const drumButtonActive: string
+export declare const drumButtonWrapper: string
+export declare const drumButtonText: string
+export declare const drumButtonTextActive: string
+export declare const drumButtonName: string
+export declare const drumButtonNameActive: string
+export declare const drumWrapper: string
+export declare const historicalDatesTextWrapper: string
+export declare const historicalDatesText: string
+export declare const historicalDatesWrapper: string
+export declare const historicalDateStart: string
+export declare const historicalDateEnd: string
+export declare const historicalDatesName: string
