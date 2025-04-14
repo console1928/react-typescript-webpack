@@ -3,6 +3,7 @@ $historicalBlockBorderColor: #e3e6ed;
 .historicalBlockWrapper {
   display: flex;
   justify-content: center;
+  min-width: 320px;
   padding-left: 160px;
 
   @media (max-width: 1200px) {

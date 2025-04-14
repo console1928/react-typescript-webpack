@@ -88,7 +88,9 @@ const Drum = ({
   }
 
   const onDrumButtonClick = (index: number) => {
-    onSwiper?.slideTo(index)
+    if (!isDrumAnimating) {
+      onSwiper?.slideTo(index)
+    }
   }
 
   return (
