@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/console1928/react-typescript-webpack/issues"
   },
-  "homepage": "https://console1928.github.io/react-typescript-webpack",
+  "homepage": "https://console1928.github.io/react-typescript-webpack-app",
   "description": "",
   "dependencies": {
     "@babel/preset-typescript": "^7.27.0",

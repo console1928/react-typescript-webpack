@@ -1,6 +1,6 @@
 # Проект на React и TypeScript
 
-Демонстрация работы проекта на Github: [https://console1928.github.io/react-typescript-webpack/](https://console1928.github.io/react-typescript-webpack/)
+Демонстрация работы проекта на Github: [https://console1928.github.io/react-typescript-webpack-app/](https://console1928.github.io/react-typescript-webpack-app/)
 
 ## Используемые технологии:
 
